@@ -9,8 +9,10 @@
                         <h2>Search results for: {{$search}}</h2>
                         <div>
                             <div>
-                                <span>Interests:</span>
-                                    {{ $seach }},  
+                                <span>Interests: </span>
+                                    {{ $seach }},
+                                <span>Teaching: </span>
+                                    {{$search}},
                             </div>
                         </div>
                     </div>

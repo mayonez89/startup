@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <div class="text">
-                        Welcome to our new project!!
+                        Welcome to our new project!
                     </div>
 {{--                    <a href="https://laravel.com/docs">Docs</a>--}}
 {{--                    <a href="https://laracasts.com">Laracasts</a>--}}
