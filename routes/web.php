@@ -38,3 +38,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users', 'HomeController@users')->name('users');
 
 Route::get("/search", "SearchController@search");
+Route::get("/schedule", function () {
+    return view('schedule');
+});
+Route::get("/activities", function () {
+    return view('activities');
+});
+Route::get("/activities1", function () {
+    return view('activities1');
+});
+Route::get("/activities2", function () {
+    return view('activities2');
+});

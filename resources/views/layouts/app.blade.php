@@ -44,7 +44,8 @@
                     @endif
 
                     <div style="margin-left: 30px; margin-right: 30px"> Search:
-                        <input type="text" placeholder="(ex. mathematics, football,...)">
+                        <input type="text" id="searchF" placeholder="(ex. mathematics, football,...)">
+                        <button class="searchB">SEARCH!</button>
                     </div>
 
                     <!-- Right Side Of Navbar -->
@@ -149,7 +150,14 @@
                 $.post('/remove-interest', {id: id}, function (response) {
                     $('#rm-'+id).remove();
                 });
-            })
+            });
+
+            $('.searchB').on('click', function () {
+                // console.log('finging');
+                let src = $('#searchF').val();
+                // console.log(src);
+                window.location.replace('/search?search='+src);
+            });
 
         });
     </script>

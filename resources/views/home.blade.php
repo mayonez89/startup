@@ -15,7 +15,10 @@
                     @endif
 
                     <a href="/my-profile">See your profile</a><br/>
-                    <a href="/edit-profile">Edit your profile info</a>
+                    <a href="/edit-profile">Edit your profile info</a><br>
+                    <a href="/schedule">See your schedule</a><br>
+                    <br>
+                    <a href="/activities">ACTIVITIES!</a>
                 </div>
             </div>
         </div>
