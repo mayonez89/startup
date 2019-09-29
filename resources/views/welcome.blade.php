@@ -81,7 +81,7 @@
 
             <div class="content">
                 <h3>
-                    {{env('APP_NAME')}}
+                    MeeTeach
                 </h3>
 
                 <div class="links">
