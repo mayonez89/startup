@@ -102,6 +102,10 @@
                     <br>
                     <b>{{$contr}}</b>
                 @endforeach
+                <br>
+                <br>
+                <br>
+                <img width="200px" src="/img/logo.jpeg">
             </div>
         </div>
     </body>
