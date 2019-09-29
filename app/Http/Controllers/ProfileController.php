@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Interest;
+use App\User;
 use App\UserInterest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -41,5 +42,14 @@ class ProfileController extends Controller
         $id = $request->get('id');
         UserInterest::where(['interest_id' => $id, 'user_id' => $user->id])->delete();
         return response()->json(['result' => 'success']);
+    }
+
+    public function myProfile() {
+        $user = Auth::user();
+        return view('my_profile')->with(compact('user'));
+    }
+
+    public function profile(User $user) {
+
     }
 }

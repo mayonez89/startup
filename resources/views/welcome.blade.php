@@ -80,9 +80,9 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    {{"STARTUP PROJECT"}}
-                </div>
+                <h3>
+                    {{env('APP_NAME')}}
+                </h3>
 
                 <div class="links">
                     <div class="text">
@@ -97,6 +97,11 @@
 {{--                    <a href="https://vapor.laravel.com">Vapor</a>--}}
 {{--                    <a href="https://github.com/laravel/laravel">GitHub</a>--}}
                 </div>
+                <br><br>Contributors:
+                @foreach($contributors as $contr)
+                    <br>
+                    <b>{{$contr}}</b>
+                @endforeach
             </div>
         </div>
     </body>

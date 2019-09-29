@@ -40,8 +40,12 @@
 
                     <?php $user=\Illuminate\Support\Facades\Auth::user();?>
                     @if($user!==null)
-                        <a href="{{ universitiesList()[$user->university] }}">{{$user->university}}</a>
+                        <a href="{{ universitiesList()[$user->university] }}" target="_blank">{{$user->university}}</a>
                     @endif
+
+                    <div style="margin-left: 30px; margin-right: 30px"> Search:
+                        <input type="text" placeholder="(ex. mathematics, football,...)">
+                    </div>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -94,10 +98,33 @@
             function enter(value) {
                 if(!interests.includes(value)) {
                     interests.push(value);
-                    let retVal = '<span class="">' + value + '</span>';
+                    let retVal = '<div class="">' + value +
+                        '<div class="rem" id="' + interests.length +'">X</div>' +
+                        '</div>';
                     $('#my-interests').append(retVal);
                 }
             }
+
+            $(document).on("click", ".rem", function (e) {
+                console.log('t');
+                let val = $(this).val();
+                if(interests.includes(val)) {
+                    interests.splice(val,1);
+                }
+                $(this).parent().remove();
+                console.log(interests);
+            });
+
+            Array.prototype.remove = function() {
+                var what, a = arguments, L = a.length, ax;
+                while (L && this.length) {
+                    what = a[--L];
+                    while ((ax = this.indexOf(what)) !== -1) {
+                        this.splice(ax, 1);
+                    }
+                }
+                return this;
+            };
 
             $('#update-profile').on('click', function () {
                 $.ajaxSetup({

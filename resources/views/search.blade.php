@@ -6,11 +6,18 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <h2>Current users count: {{$cnt}}</h2>
-                        <span>...and still counting!</span>
+                        <h2>Search results for: {{$search}}</h2>
+                        <div>
+                            <div>
+                                <span>Interests:</span>
+                                    {{ $seach }},  
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 @endsection

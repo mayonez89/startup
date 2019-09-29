@@ -14,6 +14,7 @@
                         </div>
                     @endif
 
+                    <a href="/my-profile">See your profile</a><br/>
                     <a href="/edit-profile">Edit your profile info</a>
                 </div>
             </div>
